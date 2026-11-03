@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>This was a security test — CyberAries</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="reveal">
+  <main class="card">
+    <header class="hero caught-hero">
+      <div class="badge badge-warn">SECURITY AWARENESS TEST</div>
+      <h1>⚠️ This was a phishing drill</h1>
+      <p class="lead">
+        The “₹5,000 gift” page you just used was <strong>not real</strong>. It was a
+        controlled security awareness test run by the <strong>CyberAries IT / Security team</strong>.
+      </p>
+      <p class="reassure">
+        ✅ <strong>Good news:</strong> nothing you typed was saved or sent anywhere. The form
+        discarded every field. We only recorded an anonymous “a link was clicked” event
+        so we can measure the drill — no names, emails, IDs, or passwords.
+      </p>
+    </header>
+
+    <section class="flags">
+      <h2>Here's what gave it away 🔍</h2>
+      <ul>
+        <li><strong>Too good to be true.</strong> Surprise cash/gift giveaways are the classic phishing hook.</li>
+        <li><strong>Artificial urgency.</strong> “Only 3 left — claim before it expires” pressures you to act before you think.</li>
+        <li><strong>It asked for your password.</strong> No legitimate reward, portal, or IT request will <em>ever</em> ask for your network password.</li>
+        <li><strong>Requests for internal data.</strong> Employee ID + department + email together are exactly what an attacker wants.</li>
+        <li><strong>Generic “verified” badges.</strong> A lock icon or “Secure Portal” label proves nothing — anyone can add them.</li>
+        <li><strong>Check the sender &amp; URL.</strong> Hover links and inspect the real domain before trusting a page.</li>
+      </ul>
+    </section>
+
+    <section class="next">
+      <h2>What to do next time ✅</h2>
+      <ol>
+        <li><strong>Don't enter anything.</strong> Close the page.</li>
+        <li><strong>Report it.</strong> Forward the message to <a href="mailto:security@cyberaries.com">security@cyberaries.com</a> or use the “Report Phish” button.</li>
+        <li><strong>Verify through a known channel</strong> if you're unsure — not the links in the message.</li>
+      </ol>
+      <p class="thanks">
+        Thanks for helping keep CyberAries secure. Spotting these is a skill — and you just practiced it. 💪
+      </p>
+      <p class="debug" id="debug"></p>
+    </section>
+  </main>
+
+  <footer class="foot">© CyberAries Pvt Ltd · Security Awareness Program</footer>
+
+  <script>
+    // Show the anonymous tracking id so the person can see exactly what was
+    // (and wasn't) recorded about them.
+    (function () {
+      var p = new URLSearchParams(location.search);
+      var tid = p.get("tid");
+      var el = document.getElementById("debug");
+      if (el && tid) {
+        el.textContent = "Drill reference (anonymous): " + tid;
+      }
+    })();
+  </script>
+</body>
+</html>

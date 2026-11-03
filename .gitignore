@@ -1,0 +1,10 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Local metrics dumps (never commit real drill data)
+drill-events*.json
+*.log

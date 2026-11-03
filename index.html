@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    ============================================================
+    AUTHORIZED SECURITY AWARENESS SIMULATION — CyberAries
+    This is a PHISHING DRILL lure page. It is designed to LOOK
+    like a scam so employees can practice spotting one.
+    It does NOT store or transmit anything typed into the form.
+    See README.md before deploying.
+    ============================================================
+  -->
+  <title>CyberAries Rewards — Claim Your Diwali Gift 🎁</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- Deliberately generic "security banner" — a real red flag to teach -->
+  <div class="topstrip">🔒 Secure Employee Portal · Verified by CyberAries IT</div>
+
+  <main class="card">
+    <header class="hero">
+      <div class="badge">LIMITED TIME</div>
+      <h1>Congratulations! 🎉</h1>
+      <p class="lead">
+        As a token of appreciation, <strong>CyberAries</strong> is giving away
+        <strong>5 exclusive gift cards worth ₹5,000 each</strong> to lucky employees.
+      </p>
+      <p class="urgent">⏳ Only <span id="slots">3</span> gifts left — claim yours before the offer expires!</p>
+    </header>
+
+    <!-- Deliberately asks for sensitive data: this is what employees must NOT give -->
+    <form id="claim-form" novalidate>
+      <h2>Verify your details to claim</h2>
+
+      <label>Full name
+        <input type="text" name="fullname" autocomplete="off" placeholder="Your name" />
+      </label>
+
+      <label>Employee ID
+        <input type="text" name="empid" autocomplete="off" placeholder="e.g. CA-1234" />
+      </label>
+
+      <label>Work email
+        <input type="email" name="email" autocomplete="off" placeholder="you@cyberaries.com" />
+      </label>
+
+      <label>Department
+        <input type="text" name="dept" autocomplete="off" placeholder="e.g. Finance" />
+      </label>
+
+      <!-- The real "gotcha" field: no legitimate giveaway ever asks for this -->
+      <label>Network / portal password <span class="whisper">(to confirm it's really you)</span>
+        <input type="password" name="pwd" autocomplete="off" placeholder="••••••••" />
+      </label>
+
+      <button type="submit" id="claim-btn">Claim my ₹5,000 gift →</button>
+      <p class="fineprint">
+        By claiming you agree to the Rewards Terms. Gift delivered within 24 hours.
+      </p>
+    </form>
+  </main>
+
+  <footer class="foot">
+    © CyberAries Pvt Ltd · This portal is monitored for security.
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
